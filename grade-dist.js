@@ -17,14 +17,14 @@ var data = [];
 //   title: "Intro/Sensation & Perception"
 //   instructor: "Serences, John Thomas",
 //   gpa: 3.345,
-//   percentA: 45.6,
-//   percentB: 39.7,
-//   percentC: 7.6,
-//   percentD: 0.8,
-//   percentF: 0.4,
-//   percentW: 1.7,
-//   percentP: 3.8,
-//   percentNP: 0.4
+//   percentA: .456,
+//   percentB: .397,
+//   percentC: .076,
+//   percentD: .008,
+//   percentF: .004,
+//   percentW: .017,
+//   percentP: .038,
+//   percentNP: .004
 // }
 
 function getPage(number, cb) {
