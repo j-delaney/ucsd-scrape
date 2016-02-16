@@ -4,6 +4,7 @@ var request = require('request');
 var path = require('path');
 var fs = require('fs');
 var csv = require('fast-csv');
+var ProgressBar = require('progress');
 
 var BASE_URL = 'https://as.ucsd.edu/gradeDistribution/index/GradeDistribution_page/';
 var EXPORT_FILENAME = 'gradedist.csv';
@@ -103,10 +104,15 @@ function getNumPages(cb) {
 
 exports.run = function (limit, cb) {
     getNumPages(function (pages) {
+        var progressBar = new ProgressBar('Grade Distribution [:bar] :percent', {
+            total: pages.length
+        });
         async.eachLimit(pages, limit, function (pageIndex, done) {
             getPage(pageIndex, function (html) {
                 parse(html, function (pageData) {
                     data = data.concat(pageData);
+                    progressBar.tick();
+
                     done();
                 });
             });
