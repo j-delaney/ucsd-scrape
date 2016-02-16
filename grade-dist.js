@@ -37,7 +37,7 @@ function getPage(number, cb) {
         }
 
         if (response.statusCode !== 200) {
-            throw Error('Status code was ' + response.statusCode + ' for page ');
+            throw Error('Status code was ' + response.statusCode + ' for page ' + url);
         }
 
         cb(body);
