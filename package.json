@@ -4,6 +4,9 @@
   "description": "Scrape public data from UCSD",
   "author": "J Delaney <j.delaney.sd@gmail.com>",
   "private": true,
+  "scripts": {
+    "start": "node main.js"
+  },
   "dependencies": {
     "async": "^1.5.2",
     "cheerio": "^0.20.0",
