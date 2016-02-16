@@ -1,0 +1,13 @@
+{
+  "name": "ucsd-scrape",
+  "version": "0.0.0",
+  "description": "Scrape public data from UCSD",
+  "author": "J Delaney <j.delaney.sd@gmail.com>",
+  "private": true,
+  "dependencies": {
+    "async": "^1.5.2",
+    "cheerio": "^0.20.0",
+    "fast-csv": "^1.0.0",
+    "request": "^2.69.0"
+  }
+}
